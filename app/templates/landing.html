@@ -1,0 +1,462 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="landing-shell">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-headline">Play smart. Win big. Cash out via M-Pesa.</h1>
+        <p class="hero-subtext">Slots, dice, crash and more — deposit instantly with M-Pesa STK Push and withdraw your winnings straight to your phone.</p>
+        <div class="hero-cta">
+          <a href="{{ url_for('auth.register') }}" class="btn-gold btn-lg">Join now</a>
+          <a href="{{ url_for('auth.login') }}" class="btn-outline btn-lg">Sign in</a>
+        </div>
+        <div class="hero-badges">
+          <span class="badge-item">✓ Provably fair games</span>
+          <span class="badge-item">✓ Instant M-Pesa settlements</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-graphic">
+          <svg viewBox="0 0 300 280" xmlns="http://www.w3.org/2000/svg" class="hero-svg">
+            <!-- Animated background elements -->
+            <defs>
+              <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:var(--gold);stop-opacity:0.3" />
+                <stop offset="100%" style="stop-color:var(--moss);stop-opacity:0.1" />
+              </linearGradient>
+            </defs>
+            <!-- Decorative circles -->
+            <circle cx="75" cy="60" r="35" fill="none" stroke="var(--gold)" stroke-width="1.5" opacity="0.4"/>
+            <circle cx="75" cy="60" r="25" fill="none" stroke="var(--moss)" stroke-width="1" opacity="0.3"/>
+            <circle cx="225" cy="140" r="45" fill="none" stroke="var(--moss)" stroke-width="1.5" opacity="0.3"/>
+            <circle cx="225" cy="140" r="30" fill="none" stroke="var(--gold)" stroke-width="1" opacity="0.25"/>
+            <!-- Game dice illustration -->
+            <g transform="translate(150, 120)">
+              <rect x="-40" y="-30" width="35" height="35" fill="var(--surface-raised)" stroke="var(--gold)" stroke-width="1.5" rx="3" opacity="0.8"/>
+              <circle cx="-22.5" cy="-22.5" r="3" fill="var(--gold)"/>
+              <circle cx="-22.5" cy="-12.5" r="3" fill="var(--gold)"/>
+              <circle cx="-22.5" cy="-2.5" r="3" fill="var(--gold)"/>
+              <rect x="5" y="-30" width="35" height="35" fill="var(--surface-raised)" stroke="var(--moss)" stroke-width="1.5" rx="3" opacity="0.8"/>
+              <circle cx="22.5" cy="-22.5" r="3" fill="var(--moss)"/>
+              <circle cx="22.5" cy="-12.5" r="3" fill="var(--moss)"/>
+            </g>
+            <!-- Animated lines -->
+            <line x1="30" y1="220" x2="270" y2="220" stroke="var(--gold)" stroke-width="1" opacity="0.2"/>
+            <line x1="20" y1="240" x2="280" y2="240" stroke="var(--moss)" stroke-width="1" opacity="0.15"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-label">Balance</div>
+        <div class="stat-value">KES 0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Min Stake</div>
+        <div class="stat-value">KES 10</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Max Win</div>
+        <div class="stat-value">50x</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Payouts</div>
+        <div class="stat-value">Instant</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Games Section -->
+  <section class="games-showcase">
+    <h2>Casino Games</h2>
+    <p class="section-subtitle">8 games, infinite ways to win</p>
+    <div class="games-grid">
+      <a href="{{ url_for('casino.lobby') }}" class="game-tile">
+        <div class="game-tile-icon">🚀</div>
+        <h3>Aviator</h3>
+        <p>Cash out before it flies away</p>
+      </a>
+      <a href="{{ url_for('casino.lobby') }}" class="game-tile">
+        <div class="game-tile-icon">✈️</div>
+        <h3>JetX</h3>
+        <p>Ride the jet, bail in time</p>
+      </a>
+      <a href="{{ url_for('casino.lobby') }}" class="game-tile">
+        <div class="game-tile-icon">💥</div>
+        <h3>Crash</h3>
+        <p>Cash out before it busts</p>
+      </a>
+      <a href="{{ url_for('casino.lobby') }}" class="game-tile">
+        <div class="game-tile-icon">🎰</div>
+        <h3>Mzizi Slots</h3>
+        <p>Match 3 to win 50x</p>
+      </a>
+      <a href="{{ url_for('casino.lobby') }}" class="game-tile">
+        <div class="game-tile-icon">🎲</div>
+        <h3>Dice</h3>
+        <p>Roll over or under</p>
+      </a>
+      <a href="{{ url_for('casino.lobby') }}" class="game-tile">
+        <div class="game-tile-icon">🃏</div>
+        <h3>Higher or Lower</h3>
+        <p>Next card up or down?</p>
+      </a>
+      <a href="{{ url_for('casino.lobby') }}" class="game-tile">
+        <div class="game-tile-icon">🎡</div>
+        <h3>Roulette</h3>
+        <p>Single zero — 36x on a number</p>
+      </a>
+      <a href="{{ url_for('casino.lobby') }}" class="game-tile">
+        <div class="game-tile-icon">🪙</div>
+        <h3>Coin Flip</h3>
+        <p>Heads or tails — 1.96x</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Ready to play?</h2>
+      <p>Join thousands of players on Kenya's most trusted casino platform</p>
+      <a href="{{ url_for('auth.register') }}" class="btn-gold btn-lg">Join now</a>
+    </div>
+  </section>
+</div>
+
+<style>
+/* Landing page specific styles */
+.landing-shell {
+  padding: 0;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--surface-raised) 0%, var(--surface) 100%);
+  border-bottom: 1px solid var(--line);
+  padding: 60px 28px;
+}
+
+.hero-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-text {
+  z-index: 2;
+}
+
+.hero-headline {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 0 0 16px;
+  line-height: 1.15;
+  color: var(--text);
+}
+
+.hero-subtext {
+  font-size: 1.05rem;
+  color: var(--text-dim);
+  margin: 0 0 28px;
+  line-height: 1.6;
+  max-width: 520px;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.btn-lg {
+  padding: 14px 28px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius);
+}
+
+.hero-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.badge-item {
+  font-size: 0.92rem;
+  color: var(--text-dim);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge-item::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+/* Hero Visual */
+.hero-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.hero-graphic {
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 10px 30px rgba(201, 162, 39, 0.1));
+}
+
+/* Stats Section */
+.stats-section {
+  background: var(--surface);
+  padding: 40px 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.stats-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.stat-card {
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.stat-label {
+  font-size: 0.78rem;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.stat-value {
+  font-family: var(--font-mono);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--gold-bright);
+}
+
+/* Games Showcase */
+.games-showcase {
+  padding: 60px 28px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.games-showcase h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  margin: 0 0 8px;
+  color: var(--text);
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--text-dim);
+  margin: 0 0 32px;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.game-tile {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+}
+
+.game-tile:hover {
+  background: var(--surface-raised);
+  border-color: var(--gold);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(201, 162, 39, 0.1);
+}
+
+.game-tile-icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.game-tile h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  margin: 0 0 8px;
+  color: var(--text);
+}
+
+.game-tile p {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, var(--moss-dim) 0%, var(--surface-raised) 100%);
+  padding: 60px 28px;
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-section h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  margin: 0 0 12px;
+  color: var(--text);
+}
+
+.cta-section p {
+  font-size: 1.05rem;
+  color: var(--text-dim);
+  margin: 0 0 24px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .hero-headline {
+    font-size: 2.2rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .hero {
+    padding: 40px 28px;
+  }
+  
+  .games-showcase {
+    padding: 40px 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 30px 16px;
+  }
+  
+  .hero-headline {
+    font-size: 1.8rem;
+  }
+  
+  .hero-subtext {
+    font-size: 0.95rem;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+  }
+  
+  .btn-lg {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .hero-visual {
+    display: none;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  .stat-card {
+    padding: 16px;
+  }
+  
+  .stat-value {
+    font-size: 1.3rem;
+  }
+  
+  .games-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  .game-tile {
+    min-height: 140px;
+    padding: 16px;
+  }
+  
+  .game-tile-icon {
+    font-size: 2rem;
+  }
+  
+  .game-tile h3 {
+    font-size: 0.95rem;
+  }
+  
+  .games-showcase h2 {
+    font-size: 1.6rem;
+  }
+  
+  .cta-section h2 {
+    font-size: 1.6rem;
+  }
+  
+  .cta-section {
+    padding: 40px 16px;
+  }
+}
+</style>
+{% endblock %}
